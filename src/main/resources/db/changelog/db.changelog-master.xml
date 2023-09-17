@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+        http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
+
+    <changeSet id="202309091200" author="Andrew">
+        <createTable tableName="region">
+            <column name="region_id" autoIncrement="true" type="bigint">
+                <constraints primaryKey="true" primaryKeyName="region_region_id_pk"/>
+            </column>
+
+            <column name="name" type="varchar(250)">
+                <constraints notNullConstraintName="region_name_nn"/>
+            </column>
+
+            <column name="short_name" type="varchar(250)">
+                <constraints notNullConstraintName="region_short_name_nn"/>
+            </column>
+
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
